@@ -27,4 +27,9 @@ public class RectangleTest {
         assertEquals(11, myRectangle.getWidth());
     }
 
+    @Test
+    public void testConstructorError(){
+        assertThrows(IllegalArgumentException.class, () -> new Rectangle(0, 10));
+        assertThrows(IllegalArgumentException.class, () -> new Rectangle(3, -1));
+    }
 }
