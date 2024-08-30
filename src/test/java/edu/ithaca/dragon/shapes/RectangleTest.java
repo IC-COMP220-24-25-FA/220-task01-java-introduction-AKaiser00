@@ -52,4 +52,13 @@ public class RectangleTest {
         myRectangle.doubleSize();
         assertEquals(82.5, myRectangle.calcArea(), 0.0001);
     }
+
+    @Test
+    public void longestLineWithinTest(){
+        Rectangle myRectangle = new Rectangle(10, 10);
+        assertEquals(Math.sqrt(Math.sqrt(10) + Math.sqrt(10)), myRectangle.longestLineWithin(), 0.001);
+
+        myRectangle = new Rectangle(5.5, 7.5);
+        assertEquals(Math.sqrt(Math.sqrt(5.5) + Math.sqrt(7.5)), myRectangle.calcArea(), 0.001);
+    }
 }
