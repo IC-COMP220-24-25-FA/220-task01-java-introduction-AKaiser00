@@ -7,7 +7,12 @@ public class Circle {
      * @throws IllegalArgumentException if radius is not a positive number
      */
     public Circle(double radius){
-        this.radius = radius;
+        if (radius <= 0){
+            throw new IllegalArgumentException("radius must be a positive number");
+        }
+        else{
+            this.radius = radius;
+        }
     }
 
     /**

@@ -55,6 +55,4 @@ public class CircleTest {
         assertThrows(IllegalArgumentException.class, () -> new Circle(0));
     }
 
-
-    
 }
