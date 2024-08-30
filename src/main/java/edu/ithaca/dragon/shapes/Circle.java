@@ -35,6 +35,6 @@ public class Circle {
      * @return the radius of this circle
      */
     public double getRadius(){
-
+        return radius;
     }
 }
