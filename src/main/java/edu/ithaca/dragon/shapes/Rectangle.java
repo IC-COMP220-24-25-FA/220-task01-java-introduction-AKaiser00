@@ -2,6 +2,8 @@ package edu.ithaca.dragon.shapes;
 
 public class Rectangle {
     
+    private int length;
+    private int width;
 
     public Rectangle(double length, double width){
         throw new RuntimeException("Not implemented yet");
@@ -19,4 +21,11 @@ public class Rectangle {
         throw new RuntimeException("Not implemented yet");
     }
     
+    public double getLength(){
+        throw new RuntimeException("Not implemented yet");
+    }
+    
+    public double getWidth(){
+        throw new RuntimeException("Not implemented yet");
+    }
 }
