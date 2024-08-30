@@ -56,9 +56,9 @@ public class RectangleTest {
     @Test
     public void longestLineWithinTest(){
         Rectangle myRectangle = new Rectangle(10, 10);
-        assertEquals(Math.sqrt(Math.sqrt(10) + Math.sqrt(10)), myRectangle.longestLineWithin(), 0.001);
+        assertEquals(Math.sqrt(Math.pow(10, 2) + Math.pow(10, 2)), myRectangle.longestLineWithin(), 0.001);
 
         myRectangle = new Rectangle(5.5, 7.5);
-        assertEquals(Math.sqrt(Math.sqrt(5.5) + Math.sqrt(7.5)), myRectangle.calcArea(), 0.001);
+        assertEquals(Math.sqrt(Math.pow(5.5, 2) + Math.pow(7.5, 2)), myRectangle.longestLineWithin(), 0.001);
     }
 }
