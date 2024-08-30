@@ -15,5 +15,16 @@ public class RectangleTest {
         assertTrue(8>5);
         assertFalse(8<5);
     }
-    
+
+    @Test
+    public void constructorGettersTest(){
+        Rectangle myRectangle = new Rectangle(10, 10);
+        assertEquals(10, myRectangle.getLength());
+        assertEquals(10, myRectangle.getWidth());
+
+        myRectangle = new Rectangle(9.5, 11);
+        assertEquals(9.5, myRectangle.getLength());
+        assertEquals(11, myRectangle.getWidth());
+    }
+
 }

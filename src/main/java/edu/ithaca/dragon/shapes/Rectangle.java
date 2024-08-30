@@ -2,14 +2,14 @@ package edu.ithaca.dragon.shapes;
 
 public class Rectangle {
     
-    private int length;
-    private int width;
+    private double length;
+    private double width;
 
     /**
      * @throws IllegalArgumentException if length or width is not a positive number
      */
     public Rectangle(double length, double width){
-        throw new RuntimeException("Not implemented yet");
+
     }
 
     /**
