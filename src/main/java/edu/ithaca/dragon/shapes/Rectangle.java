@@ -20,7 +20,7 @@ public class Rectangle {
      * @return the area of the rectangle
      */
     public double calcArea(){
-       throw new RuntimeException("Not implemented yet");
+        return length * width;
     }
 
     /**
