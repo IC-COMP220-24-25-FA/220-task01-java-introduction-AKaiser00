@@ -46,7 +46,7 @@ public class RectangleTest {
     public void doubleSizeTest(){
         Rectangle myRectangle = new Rectangle(10, 10);
         myRectangle.doubleSize();
-        assertEquals(200, myRectangle.calcArea());
+        assertEquals(200, myRectangle.calcArea(), 0.0001);
 
         myRectangle = new Rectangle(5.5, 7.5);
         myRectangle.doubleSize();
