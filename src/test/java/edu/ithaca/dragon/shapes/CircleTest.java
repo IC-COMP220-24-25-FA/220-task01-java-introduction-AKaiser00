@@ -51,6 +51,19 @@ public class CircleTest {
     }
 
     @Test
+    public void doubleSizeTest(){
+        Circle myCircle = new Circle(1);
+        assertEquals(3.1415, myCircle.calcArea(), 0.0001);
+        myCircle.doubleSize();
+        assertEquals(Math.PI * 2, myCircle.calcArea(), 0.0001);
+
+        myCircle = new Circle(5.5);
+        assertEquals(Math.PI * Math.pow(5.5, 2), myCircle.calcArea(), 0.0001);
+        myCircle.doubleSize();
+        assertEquals((Math.PI * Math.pow(5.5, 2)) * 2, myCircle.calcArea(), 0.0001);
+    }
+
+    @Test
     public void TestConstructorError(){
         assertThrows(IllegalArgumentException.class, () -> new Circle(0));
     }
