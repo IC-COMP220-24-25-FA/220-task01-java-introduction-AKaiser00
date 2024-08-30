@@ -9,7 +9,8 @@ public class Rectangle {
      * @throws IllegalArgumentException if length or width is not a positive number
      */
     public Rectangle(double length, double width){
-
+        this.length = length;
+        this.width = width;
     }
 
     /**
@@ -37,13 +38,13 @@ public class Rectangle {
      * @return length of the rectangle
      */
     public double getLength(){
-        throw new RuntimeException("Not implemented yet");
+        return length;
     }
     
     /**
      * @return width of the rectangle
      */
     public double getWidth(){
-        throw new RuntimeException("Not implemented yet");
+        return width;
     }
 }
