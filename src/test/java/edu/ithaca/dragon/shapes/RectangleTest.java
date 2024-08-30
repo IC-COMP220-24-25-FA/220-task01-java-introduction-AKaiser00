@@ -32,4 +32,13 @@ public class RectangleTest {
         assertThrows(IllegalArgumentException.class, () -> new Rectangle(0, 10));
         assertThrows(IllegalArgumentException.class, () -> new Rectangle(3, -1));
     }
+
+    @Test
+    public void calcAreaTest(){
+        Rectangle myRectangle = new Rectangle(10, 10);
+        assertEquals(100, myRectangle.calcArea());
+
+        myRectangle = new Rectangle(5.5, 7.5);
+        assertEquals(41.25, myRectangle.calcArea(), 0.00001);
+    }
 }
