@@ -42,6 +42,15 @@ public class CircleTest {
     }
 
     @Test
+    public void getRadiusTest(){
+        Circle myCircle = new Circle(1);
+        assertEquals(1, myCircle.getRadius());
+
+        myCircle = new Circle(5.94);
+        assertEquals(5.94, myCircle.getRadius(), 0.00000001);
+    }
+
+    @Test
     public void TestConstructorError(){
         assertThrows(IllegalArgumentException.class, () -> new Circle(0));
     }
