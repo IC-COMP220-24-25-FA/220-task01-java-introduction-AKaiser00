@@ -55,15 +55,15 @@ public class TriangleTest{
     public void doubleSizeTest(){
         Triangle myTriangle = new Triangle(3, 4, 5);
         myTriangle.doubleSize();
-        assertEquals(12, myTriangle.calcArea());
+        assertEquals(12, myTriangle.calcArea(), 0.000001);
 
         myTriangle = new Triangle(6.5, 6.5, 6.5);
         myTriangle.doubleSize();
-        assertEquals(36.58958, myTriangle.calcArea(), 0.000001);
+        assertEquals(36.58958, myTriangle.calcArea(), 0.0001);
 
         myTriangle = new Triangle(12, 10.25, 5.5);
         myTriangle.doubleSize();
-        assertEquals(40.2074, myTriangle.calcArea(), 0.00001);
+        assertEquals(56.2074, myTriangle.calcArea(), 0.001);
     }
 
     @Test

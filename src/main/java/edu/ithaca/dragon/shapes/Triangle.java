@@ -52,7 +52,9 @@ public class Triangle{
      * @post doubles the size of the triangle
      */
     public void doubleSize(){
-        throw new RuntimeException("Not implemented yet");
+        sideA = Math.sqrt(2) * sideA;
+        sideB = Math.sqrt(2) * sideB;
+        sideC = Math.sqrt(2) * sideC;
     }
 
     /**
