@@ -58,7 +58,7 @@ public class Triangle{
      * @return the longest straight line that can be drawn in the triangle
      */
     public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
+        return largestSide;
     }
 
     /**
