@@ -18,7 +18,15 @@ public class TriangleTest{
 
     @Test
     public void constructorGettersTest(){
+        Triangle myTriangle = new Triangle(3, 4, 5);
+        assertEquals(3, myTriangle.getSideA());
+        assertEquals(4, myTriangle.getSideB());
+        assertEquals(5, myTriangle.getSideC());
 
+        myTriangle = new Triangle(4, 2.5, 3.5);
+        assertEquals(4, myTriangle.getSideA());
+        assertEquals(2.5, myTriangle.getSideB(), 0.000001);
+        assertEquals(3.5, myTriangle.getSideC(), 0.000001);
     }
 
     @Test
@@ -38,6 +46,6 @@ public class TriangleTest{
 
     @Test
     public void longestLineWithinTest(){
-        
+
     }
 }
