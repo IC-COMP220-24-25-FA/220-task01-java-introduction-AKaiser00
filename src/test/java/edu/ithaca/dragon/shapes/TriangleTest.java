@@ -31,7 +31,12 @@ public class TriangleTest{
 
     @Test
     public void constructorExceptionThrowTest(){
+        assertThrows(IllegalArgumentException.class, () -> new Triangle(3, 2, -1));
+        assertThrows(IllegalArgumentException.class, () -> new Triangle(5, 0, 10));
+        assertThrows(IllegalArgumentException.class, () -> new Triangle(-2.5, 2, 5));
 
+        assertThrows(IllegalArgumentException.class, () -> new Triangle(10, 2, 5));
+        assertThrows(IllegalArgumentException.class, () -> new Triangle(3, 2, 5));
     }
 
     @Test

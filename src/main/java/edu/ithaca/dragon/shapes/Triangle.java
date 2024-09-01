@@ -8,6 +8,7 @@ public class Triangle{
 
     /**
      * @throws IllegalArgumentException if any of the sides are not positive numbers
+     * @throws IllegalArgumentException if the sides given cannot create a triangle
      */
     public Triangle(double sideAIn, double sideBIn, double sideCIn){
         sideA = sideAIn;
