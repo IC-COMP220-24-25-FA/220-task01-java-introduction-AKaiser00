@@ -44,7 +44,8 @@ public class Triangle{
      * @return the area of the triangle
      */
     public double calcArea(){
-        throw new RuntimeException("Not implemented yet");
+        double semiPeri = (sideA + sideB + sideC) / 2;
+        return Math.sqrt(semiPeri * (semiPeri - sideA) * (semiPeri - sideB) * (semiPeri - sideC));
     }
 
     /**

@@ -41,7 +41,14 @@ public class TriangleTest{
 
     @Test
     public void calcAreaTest(){
+        Triangle myTriangle = new Triangle(3, 4, 5);
+        assertEquals(6, myTriangle.calcArea());
 
+        myTriangle = new Triangle(6.5, 6.5, 6.5);
+        assertEquals(18.295, myTriangle.calcArea(), 0.001);
+
+        myTriangle = new Triangle(12, 10.25, 5.5);
+        assertEquals(28.104, myTriangle.calcArea(), 0.001);
     }
 
     @Test
