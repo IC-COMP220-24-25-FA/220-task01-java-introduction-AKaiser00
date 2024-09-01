@@ -53,7 +53,17 @@ public class TriangleTest{
 
     @Test
     public void doubleSizeTest(){
+        Triangle myTriangle = new Triangle(3, 4, 5);
+        myTriangle.doubleSize();
+        assertEquals(12, myTriangle.calcArea());
 
+        myTriangle = new Triangle(6.5, 6.5, 6.5);
+        myTriangle.doubleSize();
+        assertEquals(36.58958, myTriangle.calcArea(), 0.000001);
+
+        myTriangle = new Triangle(12, 10.25, 5.5);
+        myTriangle.doubleSize();
+        assertEquals(40.2074, myTriangle.calcArea(), 0.00001);
     }
 
     @Test
