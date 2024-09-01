@@ -7,7 +7,7 @@ public class Rectangle {
 
     /**
      * @throws IllegalArgumentException if length or width is not a positive number
-     */
+     */ 
     public Rectangle(double length, double width){
         if (length <= 0 || width <= 0){
             throw new IllegalArgumentException("length and width must be a positive number");
