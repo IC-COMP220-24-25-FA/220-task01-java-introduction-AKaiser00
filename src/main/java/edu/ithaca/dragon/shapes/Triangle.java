@@ -5,12 +5,36 @@ public class Triangle{
     private double sideA;
     private double sideB;
     private double sideC;
+    private double largestSide;
 
     /**
      * @throws IllegalArgumentException if any of the sides are not positive numbers
-     * @throws IllegalArgumentException if the sides given cannot create a triangle
+     * @throws IllegalArgumentException if the largest side is larger than the other two sides combined (triangle cannot be made)
      */
     public Triangle(double sideAIn, double sideBIn, double sideCIn){
+        if (sideAIn <= 0 || sideBIn <= 0 || sideCIn <= 0){
+            throw new IllegalArgumentException("All sides must be positive");
+        }
+
+        if (sideAIn >= sideBIn && sideAIn >= sideCIn){
+            largestSide = sideAIn;
+            if (largestSide >= (sideBIn + sideCIn)){
+                throw new IllegalArgumentException("Largest side is larger than other two sides combined. Unable to make triangle.");
+            }
+        }
+        else if (sideBIn >= sideAIn && sideBIn >= sideCIn){
+            largestSide = sideBIn;
+            if (largestSide >= (sideAIn + sideCIn)){
+                throw new IllegalArgumentException("Largest side is larger than other two sides combined. Unable to make triangle.");
+            }
+        }
+        else {
+            largestSide = sideCIn;
+            if (largestSide >= (sideAIn + sideBIn)){
+                throw new IllegalArgumentException("Largest side is larger than other two sides combined. Unable to make triangle.");
+            }
+        }
+
         sideA = sideAIn;
         sideB = sideBIn;
         sideC = sideCIn;

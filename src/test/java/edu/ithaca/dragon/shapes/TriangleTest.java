@@ -36,7 +36,7 @@ public class TriangleTest{
         assertThrows(IllegalArgumentException.class, () -> new Triangle(-2.5, 2, 5));
 
         assertThrows(IllegalArgumentException.class, () -> new Triangle(10, 2, 5));
-        assertThrows(IllegalArgumentException.class, () -> new Triangle(3, 2, 5));
+        assertThrows(IllegalArgumentException.class, () -> new Triangle(3, 2, 6));
     }
 
     @Test
