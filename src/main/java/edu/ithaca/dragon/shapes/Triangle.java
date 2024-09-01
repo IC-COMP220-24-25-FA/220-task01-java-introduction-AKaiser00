@@ -10,7 +10,9 @@ public class Triangle{
      * @throws IllegalArgumentException if any of the sides are not positive numbers
      */
     public Triangle(double sideAIn, double sideBIn, double sideCIn){
-
+        sideA = sideAIn;
+        sideB = sideBIn;
+        sideC = sideCIn;
     }
 
     /**
@@ -38,20 +40,20 @@ public class Triangle{
      * @return sideA of the triangle
      */
     public double getSideA(){
-        throw new RuntimeException("Not implemented yet");
+        return sideA;
     }
 
     /**
      * @return sideB of the triangle
      */
     public double getSideB(){
-        throw new RuntimeException("Not implemented yet");
+        return sideB;
     }
 
     /**
      * @return sideC of the triangle
      */
     public double getSideC(){
-        throw new RuntimeException("Not implemented yet");
+        return sideC;
     }
 }
