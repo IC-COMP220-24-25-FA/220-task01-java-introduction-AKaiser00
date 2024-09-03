@@ -12,12 +12,16 @@ public class FunctionPracticeTest {
 
     @Test
     public void largestOfThreeTest(){
+        // Tests to make sure that it finds largest from each position
         assertEquals(5, FunctionPractice.largestOfThree(4, 5, 2));
         assertEquals(5, FunctionPractice.largestOfThree(5, 4, 2));
         assertEquals(5, FunctionPractice.largestOfThree(4, 2, 5));
+        // Test to make sure that it finds largest when all positions have same value
         assertEquals(5, FunctionPractice.largestOfThree(5, 5, 5));
 
+        // Test to make sure it throws an exception when all numbers are negative
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(-1, -1, -1));
+        // Test to make sure it throws an exception when at least one of the numbers are negative
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(5, -1, 3));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(5, 3, -1));
     }
