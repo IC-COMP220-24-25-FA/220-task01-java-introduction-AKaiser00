@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.Test;
 
@@ -103,5 +104,23 @@ public class FunctionPracticeTest {
         myList.remove(0);
         myList.remove(0);
         assertEquals(0, FunctionPractice.findLastLargest(myList));
+    }
+    
+    @Test
+    public void findFirstMostOccurencesOfLetterTest(){
+        ArrayList<String> myList = new ArrayList<String>();
+
+        assertNull(FunctionPractice.findFirstMostOccurencesOfLetter(myList, 'n'));
+
+        myList.add("happy");
+        myList.add("sad");
+        myList.add("angry");
+
+        assertEquals("happy", FunctionPractice.findFirstMostOccurencesOfLetter(myList, 'p'));
+        assertEquals("sad", FunctionPractice.findFirstMostOccurencesOfLetter(myList, 'd'));
+        assertEquals("angry", FunctionPractice.findFirstMostOccurencesOfLetter(myList, 'g'));
+
+        assertEquals("happy", FunctionPractice.findFirstMostOccurencesOfLetter(myList, 'a'));
+        assertEquals("happy", FunctionPractice.findFirstMostOccurencesOfLetter(myList, 'y'));
     }
 }

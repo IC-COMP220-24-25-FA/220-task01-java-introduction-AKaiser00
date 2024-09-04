@@ -93,8 +93,9 @@ public class FunctionPractice {
     }
 
     /**
-     * @return the string that has contains the most occurences of the given letter
-     * @throws 
+     * @return the string that has contains the most occurences of the given letter, or null if the list is empty.
+     * If the letter occurs the same amount in multiple strings, return the string in the earliest index
+     * If the letter does not show up in any strings, will return the first string in the list (has most occurences at 0, and is first)
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
         throw new RuntimeException("Not Implemented");
