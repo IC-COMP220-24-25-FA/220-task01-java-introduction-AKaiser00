@@ -98,8 +98,25 @@ public class FunctionPractice {
      * If the letter does not show up in any strings, will return the first string in the list (has most occurences at 0, and is first)
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
-        throw new RuntimeException("Not Implemented");
+        if (words.size() == 0){
+            return null;
+        }
+        int mostOccurencesIndex = -1;
+        int mostOccurencesNum = -1;
+        int occurences;
+        for (int i = 0; i < words.size(); i++){
+            String word = words.get(i);
+            occurences = 0;
+            for (int j = 0; j < word.length(); j++){
+                if (word.charAt(j) == letter){
+                    occurences++;
+                }
+            }
+            if (occurences > mostOccurencesNum){
+                mostOccurencesIndex = i;
+                mostOccurencesNum = occurences;
+            }
+        }
+        return words.get(mostOccurencesIndex);
     }
-
-
 }
