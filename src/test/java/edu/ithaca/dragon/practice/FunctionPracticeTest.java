@@ -48,6 +48,7 @@ public class FunctionPracticeTest {
         assertFalse(FunctionPractice.isGoodDog(5, 2, true));
     }
 
+    @Test
     public void findFirstLargestTest(){
         ArrayList<Integer> myList = new ArrayList<Integer>();
 
@@ -67,5 +68,9 @@ public class FunctionPracticeTest {
         myList.set(1, 5);
         myList.set(2, 5);
         assertEquals(1, FunctionPractice.findFirstLargest(myList));
+
+        myList.remove(0);
+        myList.remove(0);
+        assertEquals(0, FunctionPractice.findFirstLargest(myList));
     }
 }
