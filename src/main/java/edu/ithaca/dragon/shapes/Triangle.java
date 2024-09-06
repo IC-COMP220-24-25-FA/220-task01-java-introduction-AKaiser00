@@ -86,6 +86,6 @@ public class Triangle implements Shape{
     }
 
     public String toString(){{
-        return "Triangle: Side A = " + sideA + ", Side B = " + sideB + ", Side C = ";
+        return "Triangle: Side A = " + sideA + ", Side B = " + sideB + ", Side C = " + sideC;
     }}
 }

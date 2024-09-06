@@ -1,8 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
 import java.util.Scanner;
-import java.awt.Rectangle;
-import java.awt.Shape;
 import java.text.DecimalFormat;
 
 import java.util.ArrayList;
@@ -13,11 +11,10 @@ public class ShapeMain {
 
         DecimalFormat decForm = new DecimalFormat("0.000");
 
-        //Interface Usage
+        // Interface Usage
         List<Shape> myShapes = new ArrayList<Shape>();
         for (int i=0; i<10; i++){
             double rand = Math.random() * 3;
-            System.out.println(rand); 
             Shape myShape;
             if (rand < 1){
                 //Rectangle
@@ -32,16 +29,27 @@ public class ShapeMain {
             }
             else {
                 //Triangle
-                double randomSideA = (Math.random() * 100) + 1;
-                double randomSideB = (Math.random() * 100) + 1;
-                double randomSideC = (Math.random() * 100) + 1;
+                boolean viableTriangle = false;
+                double randomSideA = 0;
+                double randomSideB = 0;
+                double randomSideC = 0;
+                while (!viableTriangle){
+                    randomSideA = (Math.random() * 100) + 1;
+                    randomSideB = (Math.random() * 100) + 1;
+                    randomSideC = (Math.random() * 100) + 1;
+                    if (randomSideA < randomSideB + randomSideC && randomSideB < randomSideC + randomSideA && randomSideC < randomSideA + randomSideB){
+                        viableTriangle = true;
+                    }
+                }
                 myShape = new Triangle(randomSideA, randomSideB, randomSideC);
             }
             myShapes.add(myShape);
         }
+        System.out.println("\n10 Random Shapes:");
         for (int i=0; i<10; i++){
             System.out.println(myShapes.get(i));
         }
+        System.out.println("\nDoubling Size:");
         for (int i=0; i<10; i++){
             myShapes.get(i).doubleSize();
             System.out.println(myShapes.get(i));

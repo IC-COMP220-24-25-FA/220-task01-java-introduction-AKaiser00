@@ -45,6 +45,6 @@ public class Circle implements Shape {
     }
 
     public String toString(){
-        return "Cirle: Radius = " + radius;
+        return "Circle: Radius = " + radius;
     }
 }
