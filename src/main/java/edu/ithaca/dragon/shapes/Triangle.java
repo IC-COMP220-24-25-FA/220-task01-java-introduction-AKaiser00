@@ -84,4 +84,8 @@ public class Triangle{
     public double getSideC(){
         return sideC;
     }
+
+    public String toString(){{
+        return "Triangle: Side A = " + sideA + ", Side B = " + sideB + ", Side C = ";
+    }}
 }

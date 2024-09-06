@@ -53,4 +53,8 @@ public class Rectangle {
     public double getWidth(){
         return width;
     }
+
+    public String toString(){
+        return "Rectangle: Length = " + length + ", Width = " + width;
+    }
 }
