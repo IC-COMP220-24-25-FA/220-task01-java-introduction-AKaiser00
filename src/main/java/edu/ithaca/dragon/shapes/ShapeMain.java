@@ -8,12 +8,40 @@ import java.util.List;
 
 public class ShapeMain {
         public static void main(String[] args){
+
+        DecimalFormat decForm = new DecimalFormat("0.000");
+
+        //Interface Usage
+        List<Shape> myShapes = new ArrayList<Shape>();
+        for (int i=0; i<10; i++){
+            double rand = Math.random() * 3;
+            System.out.println(rand); 
+            if (rand < 1){
+                //Rectangle
+                double randomLength = (Math.random() * 100) + 1;
+                double randomWidth = (Math.random() * 100) + 1;
+                myShapes.add(new Rectangle(randomLength, randomWidth));
+            }
+            else if (rand < 2){
+                //Circle
+                double randomRadius = (Math.random() * 100) + 1;
+                myShapes.add(new Circle(randomRadius));
+            }
+            else {
+                //Triangle
+                double randomSideA = (Math.random() * 100) + 1;
+                double randomSideB = (Math.random() * 100) + 1;
+                double randomSideC = (Math.random() * 100) + 1;
+                myShapes.add(new Triangle(randomSideA, randomSideB, randomSideC));
+            }
+        }
+
+
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
         //Allow the user to choose one, double the size of that one, and print them all again
         //Use a loop to repeat the process 5 times
 
         Scanner myScanner = new Scanner(System.in);
-        DecimalFormat decForm = new DecimalFormat("0.000");
 
         double randomLength;
         double randomWidth;
