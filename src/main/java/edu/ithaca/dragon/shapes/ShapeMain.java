@@ -1,6 +1,8 @@
 package edu.ithaca.dragon.shapes;
 
 import java.util.Scanner;
+import java.awt.Rectangle;
+import java.awt.Shape;
 import java.text.DecimalFormat;
 
 import java.util.ArrayList;
@@ -16,26 +18,34 @@ public class ShapeMain {
         for (int i=0; i<10; i++){
             double rand = Math.random() * 3;
             System.out.println(rand); 
+            Shape myShape;
             if (rand < 1){
                 //Rectangle
                 double randomLength = (Math.random() * 100) + 1;
                 double randomWidth = (Math.random() * 100) + 1;
-                myShapes.add(new Rectangle(randomLength, randomWidth));
+                myShape = new Rectangle(randomLength, randomWidth);
             }
             else if (rand < 2){
                 //Circle
                 double randomRadius = (Math.random() * 100) + 1;
-                myShapes.add(new Circle(randomRadius));
+                myShape = new Circle(randomRadius);
             }
             else {
                 //Triangle
                 double randomSideA = (Math.random() * 100) + 1;
                 double randomSideB = (Math.random() * 100) + 1;
                 double randomSideC = (Math.random() * 100) + 1;
-                myShapes.add(new Triangle(randomSideA, randomSideB, randomSideC));
+                myShape = new Triangle(randomSideA, randomSideB, randomSideC);
             }
+            myShapes.add(myShape);
         }
-
+        for (int i=0; i<10; i++){
+            System.out.println(myShapes.get(i));
+        }
+        for (int i=0; i<10; i++){
+            myShapes.get(i).doubleSize();
+            System.out.println(myShapes.get(i));
+        }
 
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
         //Allow the user to choose one, double the size of that one, and print them all again
